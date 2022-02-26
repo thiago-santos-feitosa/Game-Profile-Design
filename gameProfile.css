@@ -20,9 +20,6 @@ body{
 }
 
 .game-header{
-    /* z-index: 9999;
-    position: sticky; */
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -91,8 +88,6 @@ body{
     display: flex;
     justify-content: space-between;
 
-    /* background-color: aliceblue; */
-
     transform: translateY(-500%);
 
     margin-left: 20px;
@@ -106,7 +101,6 @@ body{
     border: none;
 
     background-color: black;
-
     color: white;
     font-size: 30px;
 }
@@ -150,7 +144,6 @@ body{
     gap: 25px;
 
     padding: 15px;
-    /* background-color: pink; */
 }
 .game-upcoming-cards:hover{
     color:rgb(31, 183, 221);
@@ -233,15 +226,16 @@ body{
     border-radius: 2%;
 }
 
-/* SCROOL TOP  */
+/* SCROLL TOP  */
 
 #scrool{
     position: absolute;
+    
+    width: 50px;
+    height: 50px;
 
     z-index: 9999;
     background-color: pink;
-    width: 50px;
-    height: 50px;
 }
 #back-to-top{
     position: fixed;
