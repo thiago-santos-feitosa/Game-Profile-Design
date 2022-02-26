@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+a{
+    color: white;
+    font-size: 20px;
+    font-family: 'Staatliches', cursive;
+}
+body{
+    position: relative;
+    background-image: linear-gradient(180deg, #5c3f64 0, #4a2f5e 25%, #321f59 50%, #0a1254 75%, #000550 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.game-header{
+    /* z-index: 9999;
+    position: sticky; */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    height: 120px;
+    background-image: linear-gradient(185deg, #1f4459 0, #1f4459 50%, #1f4459 100%);
+}
+.game-header-nav{
+    display: flex;
+    gap: 50px;
+}
+.game-header-pic{
+    width: 70px;
+    height: 70px;
+}
+.game-header-button{
+    width: 150px;
+    height: 50px;
+
+    border: white 1px solid;
+    border-radius: 5px;
+
+    background: transparent;
+    color: white;
+    font-family: 'Staatliches', cursive;
+    font-size: 20px;
+}
+.game-header-button:hover{
+    cursor: pointer;
+    background-color: blue;
+    border: none;
+    transition: ease-in 0.5s;
+}
+
+/* CAROUSEL */
+
+.game-carousel{
+    position: relative;
+    overflow: hidden;
+
+    max-width: 100vw;
+    height: 77vh;
+}
+.game-carousel-item{
+    display: none;
+}
+.game-carousel-item img{
+    width: 100%; 
+    height: 500px;
+}
+.game-carousel-item-visible{
+    display: block;
+    animation: visibility 0.5s;
+}
+@keyframes visibility{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: opacity linear;
+    }
+}
+.game-carousel-actions{
+    display: flex;
+    justify-content: space-between;
+
+    /* background-color: aliceblue; */
+
+    transform: translateY(-500%);
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.game-carousel-actions button{
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50px;
+    border: none;
+
+    background-color: black;
+
+    color: white;
+    font-size: 30px;
+}
+.game-carousel-actions button:hover{
+    cursor: pointer;
+}
+
+/* UPCOMING GAMES */
+
+.game-upcoming{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: white;
+}
+.game-upcoming-h1{
+    font-family: 'Staatliches', cursive;
+    font-size: 50px;
+}
+.game-upcoming-view{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 85px;
+
+    font-family: 'Staatliches', cursive;
+    font-size: 25px;
+
+    margin-top: 25px;
+}
+.game-upcoming-cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    padding: 15px;
+    /* background-color: pink; */
+}
+.game-upcoming-cards:hover{
+    color:rgb(31, 183, 221);
+}
+.game-upcoming-cards img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+
+    filter: brightness(150%);
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.game-upcoming-cards img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.game-upcoming-cards-text p{
+    text-align: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+
+/* INTRODUCTION */
+
+.introduction{
+    display: flex;
+    flex-direction: row;
+
+    background-image: linear-gradient(155deg, #60479f 0, #3f337c 25%, #1f1f59 50%, #030937 75%, #00001b 100%);
+    width: 1200px;
+    height: 73vh;
+
+    border-radius: 10px;
+    margin-top: 80px;
+}
+.introduction-text{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    width: 40vw;
+    height: 60vh;
+
+    padding: 40px;
+}
+.introduction h1{
+    font-family: 'Staatliches', cursive;
+    font-size: 50px;
+}
+.introduction-p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+.intruduction-button-signup{
+    width: 150px;
+    height: 50px;
+
+    border-radius: 5px;
+    border: 1px solid white;
+
+    font-family: 'Staatliches', cursive;
+    font-size: 20px;
+
+    background-color: transparent;
+}
+.intruduction-button-signup:hover{
+    background-color: rgb(71, 71, 146);
+    transition: ease-in 0.5s;
+    cursor: pointer;
+}
+.introduction img{
+    position: absolute;
+
+    right: 50px;
+    top: 82em;
+
+    width: 600px;
+    border-radius: 2%;
+}
+
+/* SCROOL TOP  */
+
+#scrool{
+    position: absolute;
+
+    z-index: 9999;
+    background-color: pink;
+    width: 50px;
+    height: 50px;
+}
+#back-to-top{
+    position: fixed;
+
+    width: 50px;
+    height: 40px;
+
+    background: rgba( white, white, white, 0.5);
+    border: 1px solid white;
+    border-radius: 5px;
+
+    font-family:  'Staatliches', cursive;
+    color: black;
+
+    z-index: 9999;
+
+    right: 25px;
+    bottom: 10px;
+}
+#back-to-top:hover{
+    background-color: blue;
+    border: none;
+    color: white;
+
+    cursor: pointer;
+    transition: ease-in 0.5s;
+}
